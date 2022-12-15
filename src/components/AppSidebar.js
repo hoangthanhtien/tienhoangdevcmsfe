@@ -30,8 +30,13 @@ const AppSidebar = () => {
       }}
     >
       <CSidebarBrand className="d-none d-md-flex" to="/">
-        <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} />
-        <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
+        {/*   <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} /> */}
+        {/*   <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} /> */}
+        <img
+          style={{ width: '50px', marginRight: '1rem' }}
+          src="https://ahstigerlife.com/wp-content/uploads/2022/08/giga-chad.jpg"
+        />
+        tienhoangdev.com
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>
