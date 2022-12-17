@@ -1,18 +1,18 @@
 import React from 'react'
-import CIcon from '@coreui/icons-react'
-import {
-  cilBell,
-  cilCalculator,
-  cilChartPie,
-  cilCursor,
-  cilDescription,
-  cilDrop,
-  cilNotes,
-  cilPencil,
-  cilPuzzle,
-  cilSpeedometer,
-  cilStar,
-} from '@coreui/icons'
+// import CIcon from '@coreui/icons-react'
+// import {
+//   cilBell,
+//   cilCalculator,
+//   cilChartPie,
+//   cilCursor,
+//   cilDescription,
+//   cilDrop,
+//   cilNotes,
+//   cilPencil,
+//   cilPuzzle,
+//   cilSpeedometer,
+//   cilStar,
+// } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
@@ -36,6 +36,52 @@ const _nav = [
         component: CNavItem,
         name: 'Giới thiệu về Golang',
         to: '/golang/golang-intro',
+      },
+    ],
+  },
+  {
+    component: CNavTitle,
+    name: 'Others',
+  },
+  {
+    component: CNavGroup,
+    name: 'Git',
+    to: '/git',
+    icon: (
+      <img
+        src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+        style={{ width: '2rem', marginRight: '1rem' }}
+        // customClassName="nav-icon"
+      />
+    ),
+    items: [
+      {
+        component: CNavItem,
+        name: 'Git workflow với rebase',
+        to: '/git/git-rebase-workflow',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Postgresql',
+    to: '/postgresql',
+    icon: (
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/5968/5968342.png"
+        style={{ width: '2rem', marginRight: '1rem' }}
+      />
+    ),
+    items: [
+      {
+        component: CNavItem,
+        name: 'Cài đặt PG trên ubuntu',
+        to: '/postgresql/ubuntu-installation',
+      },
+      {
+        component: CNavItem,
+        name: 'ACID trong DBMS',
+        to: '/postgresql/acid',
       },
     ],
   },

@@ -53,6 +53,13 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 // Golang
 const GolangIntro = React.lazy(() => import('./views/golang/golangIntro'))
 
+// Git
+const GitRebaseWorkflow = React.lazy(() => import('./views/git/gitRebaseWorkflow'))
+
+// Postgresql
+const ubuntuPgInstallation = React.lazy(() => import('./views/postgresql/ubuntuPgInstallation'))
+const ACID = React.lazy(() => import('./views/postgresql/acid'))
+
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', element: Dashboard },
@@ -99,6 +106,21 @@ const routes = [
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
   { path: '/golang/golang-intro', name: 'GolangIntro', element: GolangIntro },
+  {
+    path: '/postgresql/ubuntu-installation',
+    name: 'ubuntuPgInstallation',
+    element: ubuntuPgInstallation,
+  },
+  {
+    path: '/postgresql/acid',
+    name: 'ACID trong DBMS',
+    element: ACID,
+  },
+  {
+    path: '/git/git-rebase-workflow',
+    name: 'Git workflow với rebase',
+    element: GitRebaseWorkflow,
+  },
 ]
 
 export default routes
