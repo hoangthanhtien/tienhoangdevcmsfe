@@ -1,0 +1,19 @@
+name: Deploy personal wiki.tienhoangdev.com
+run-name: Deploy personal wiki.tienhoangdev.com
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Load bash config
+        run: source ~/.bash_profile
+      - name: Copy envs
+        run: eval "echo \"$(cat .env)\"" > .env
+      - name: Install project dependencies
+        run: npm install
+      - name: Build the static file from React
+        run: npm run build
+

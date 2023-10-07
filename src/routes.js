@@ -52,7 +52,8 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 // Golang
 const GolangIntro = React.lazy(() => import('./views/golang/golangIntro'))
-
+// AWS
+const SAMCheatSheet = React.lazy(() => import('./views/aws/dva/sam/sam'))
 // Git
 const GitRebaseWorkflow = React.lazy(() => import('./views/git/gitRebaseWorkflow'))
 
@@ -120,6 +121,11 @@ const routes = [
     path: '/git/git-rebase-workflow',
     name: 'Git workflow với rebase',
     element: GitRebaseWorkflow,
+  },
+  {
+    path: '/aws/dva/sam-cheatsheet',
+    name: 'AWS SAM Cheatsheet',
+    element: SAMCheatSheet,
   },
 ]
 
