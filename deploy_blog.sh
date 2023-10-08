@@ -1,5 +1,5 @@
 ##!/bin/bash
-npm run build &&
-ssh -p 26266 root@42.96.5.18  'rm -rf /var/www/html/tienhoangdevblog' &&
-scp -P 26266 -r build root@42.96.5.18:/var/www/html/tienhoangdevblog
+# npm run build &&
+ssh -p $SSH_PROD_SERVER_PORT root@$PROD_SERVER_IP  'rm -rf /var/www/html/tienhoangdevblog' &&
+scp -P $SSH_PROD_SERVER_PORT -r build root@$PROD_SERVER_IP:/var/www/html/tienhoangdevblog
 
