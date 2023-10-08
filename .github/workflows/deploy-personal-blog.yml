@@ -14,6 +14,6 @@ jobs:
         run: eval "echo \"$(cat .env)\"" > .env
       - name: Install project dependencies
         run: npm install
-      - name: Build the static file from React
-        run: npm run build
+      - name: Build the static file from React, deploy to production VPS
+        run: bash deploy_blog.sh
 
